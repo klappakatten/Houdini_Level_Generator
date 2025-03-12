@@ -1,0 +1,16 @@
+import sys
+import importlib
+
+sys.path.append("F:/Projects/Specialisering/p3/py")
+
+from level_node import Node, NodeGraph, NodeType
+import main
+
+importlib.reload(main)
+
+window_instance = None
+
+if window_instance is None:
+    main_window = hou.ui.mainQtWindow()
+    window = main.MainWindow(parent=main_window)
+    window.show()
